@@ -1,0 +1,9 @@
+Question: Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+Answer: The vulnerability stems from sending the "name" property as an unsanitized string
+within the request, making it susceptible to cross-site scripting attacks. This allows attackers
+to manipulate the input and potentially compromise the security of the system.
+The secure version mitigates this vulnerability by sanitizing all properties and variables
+received in the request, preventing unauthorized manipulation.
+
+Question: Which CIA property does tampering violate?
+Answer: Tampering violates the Integrity property of the CIA (Confidentiality, Integrity, Availability) triad.
