@@ -1,3 +1,13 @@
-Briefly explain the vulnerability and why the secure version prevents the vulnerability.
-Which CIA property does tampering violate?
-What additional security mechanisms can you incorporate?
+Question: Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+Answer: The insecure script fails to properly sanitize the username input, leaving it vulnerable to
+potential NoSQL injection attacks by malicious users. By entering a MongoDB query like username!='',
+an attacker could retrieve passwords for all users. To prevent this, the secure.js script applies
+sanitization measures to the username string received from users.
+
+Quesiton: Which CIA property does tampering violate?
+Answer: Confidentiality
+
+Question: What additional security mechanisms can you incorporate?
+Answer: We have the option to eliminate console logs containing sensitive data and incorporate an
+authentication mechanism. Additionally, it's advisable to encrypt the payload when transmitting
+information across channels.

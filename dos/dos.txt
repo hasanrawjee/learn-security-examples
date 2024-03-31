@@ -1,2 +1,9 @@
-- Briefly explain the vulnerability and why the secure version prevents the vulnerability.
-- What additional security mechanisms can you incorporate to prevent such attacks?
+Question: Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+Answer: The insecure.js script lacks proper error handling when querying the database, making
+it vulnerable. In the event of an error, the server may crash, rendering it inaccessible
+to legitimate users.
+
+Question: What additional security mechanisms can you incorporate to prevent such attacks?
+Answer: We could incorporate a rate limiting system as simply implementing an error handling
+mechanism won't suffice; the server remains susceptible to DDoS attacks, potentially rendering
+it inaccessible to genuine users. Additionally, we can enhance security by sanitizing incoming parameters.
